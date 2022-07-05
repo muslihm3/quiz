@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Calculator</title>
+ <style type="text/css">
+  .tombol{
+   background-color: lightblue;
+  }
+  .tabel{
+   background-color: silver;
+   margin: 10px;
+   padding: 10px;
+  }
+ </style>
+</head>
+<body>
+ <form name="calculator">
+  
+  <table style="background-color: " class="tabel">
+   <caption>Calculator</caption>
+   <tr>
+    <td>Input</td><td>:</td><td><input type="string" name="input" placeholder=" (operand1 operator operand2)"></td>
+   </tr>
+<td colspan="3" align="center">
+     <input class="tombol" type="button" onclick="operasi()" value=" Hitung ">
+    </td>
+   </tr>
+   <tr>
+    <td>Output</td><td>:</td><td><input type="string" name="hasil"></td>
+   </tr>
+
+  </table>
+ </form>
+
+</body>
+</html>
+<script>
+function operasi(){
+ var input=(document.calculator.input.value);
+ var hasil= eval(input);
+ document.calculator.hasil.value=hasil;
+}
+
+
+
+</script>
